@@ -1,34 +1,23 @@
-// const container = document.querySelector("#categories");
-
-// const listRef = container.querySelectorAll('.item');
-// console.log(`В списке ${listRef.length} категории.`);
-
-// // console.log(`В списке ${listRef.childNodes.textContent}`);
-// const titleRef = container.querySelectorAll('h2');
-// const titleLinkRer = container.querySelectorAll('ul');
-
-// titleRef.forEach((categ) => {
-//    console.log(`Категория: ${categ.textContent}`)
-//    console.log(`Категория: ${categ.childNodes.length}`)
-// console.log(categ.childNodes);
-// }
-//    );
-
-// titleLinkRer.forEach(quantity =>
-//    console.log(`Количество элементов: ${quantity.children.length}`));
-
-
 const container = document.querySelector("#categories");
 
-const listRef = container.querySelectorAll('.item');
-console.log(`В списке ${listRef.length} категории.`);
+const categoriesRef = container.querySelectorAll('.item');
+console.log(`В списке ${categoriesRef.length} категории.`);
 
-const titleRef = container.querySelectorAll('h2');
-const titleLinkRer = container.querySelectorAll('ul');
+const listCategoriesRef = [...categoriesRef].map(
+   listCategor => `Категория: ${listCategor.children[0].textContent}
+Количество элементов: ${listCategor.children[1].children.length}`
+   )
+   .join("\n");
+console.log(listCategoriesRef);
 
-titleRef.forEach(categ =>
-   console.log(`Категория: ${categ.textContent}`)
-);
 
-titleLinkRer.forEach(quantity =>
-   console.log(`Количество элементов: ${quantity.children.length}`));
+// const ulEL = document.querySelector('#categories');
+// console.log(`В списке ${ulEL.children.length} категории.`);
+
+// const liEl = document.querySelectorAll('.item');
+// liEl.forEach(el => {
+//     const category = el.querySelector('h2');
+//     const quantity = el.querySelector('ul');
+//     console.log(`Категория: ${category.textContent}`);
+//     console.log(`Количество элементов: ${quantity.children.length}`);
+// });
