@@ -1,40 +1,9 @@
 const inputRef = document.querySelector('#validation-input');
-const inputMaxLength = inputRef.getAttribute('data-length');
-
-
-console.log(inputMaxLength);
-
 const createAttribute = inputRef.setAttribute('maxlength', 'inputMaxLength')
 
-// console.log(inputRef.maxlength.value);
-// console.log(inputRef.maxlength);
-// console.dir(inputRef.attributes);
-
-// inputRef.addEventListener('input', () => {
-//    console.log('inputRef');
-//    // if (inputRef.input === inputRef.dataLength) {
-//    //    inputRef.classList('.valid');
-//    //    // console.log(validationMessage === 'ok');
-      
-//    // }
-// })
-
-
-// const changeIdValid = inputRef.getElementById('#validation-input')
-
-///////
-// function changeIdValid () {
-//    const e = document.getElementById('validation-input');
-//    e.id = "validation-input.valid";
-
-// }
-// console.log(changeIdValid);
-
-
-let inputVal = document.getElementById("validation-input");
-
-let totalLenght = inputVal.getAttribute("data-length");
-let intTotallenght = parseInt(totalLenght, 10);
+const inputVal = document.getElementById("validation-input");
+const inputLength = inputVal.getAttribute("data-length");
+const intTotallenght = parseInt(inputLength, 10);
 
 inputVal.oninput = function() {
   if (inputVal.value.length === intTotallenght) {

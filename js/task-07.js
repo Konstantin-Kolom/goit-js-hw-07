@@ -1,8 +1,9 @@
 const inputRef = document.querySelector('#font-size-control')
 const spanRef = document.querySelector('#text')
-console.log(inputRef);
-console.log(spanRef);
 
-inputRef.addEventListener(input, () => {
-// spanRef.style.fontSize
+inputRef.addEventListener('click', el => {
+   spanRef.style.fontSize = el.screenX
+   let size = `${el.screenX}px`;
+   spanRef.style.fontSize = size;
 })
+

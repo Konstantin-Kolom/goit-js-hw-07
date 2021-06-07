@@ -42,9 +42,3 @@ galleryStyleRef.style.margin = '30px';
 galleryStyleRef.style.padding = '0px';
 console.log(galleryStyleRef)
 
-// const galleryListStyleRef = document.querySelector('ul > .js-gallery__list');
-// console.log(galleryListStyleRef);
-// galleryListStyleRef.style.margin = '40px';
-
-// const imageStyleRef = document.querySelectorAll('.js-gallery__image');
-// imageRef.style.objectFit = 'contain';
