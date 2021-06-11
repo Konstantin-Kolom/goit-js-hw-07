@@ -1,11 +1,13 @@
-const inputRef = document.querySelector('#validation-input');
-const createAttribute = inputRef.setAttribute('maxlength', 'inputMaxLength')
+// const inputRef = document.querySelector('#validation-input');
+// const createAttribute = inputRef.setAttribute('maxlength', 'inputMaxLength')
 
 const inputVal = document.getElementById("validation-input");
 const inputLength = inputVal.getAttribute("data-length");
 const intTotallenght = parseInt(inputLength, 10);
 
-inputVal.oninput = function() {
+inputEL.addEventListener('blur', onInput);
+
+function onInput() {
   if (inputVal.value.length === intTotallenght) {
     inputVal.classList.remove("invalid");
     inputVal.classList.add("valid");
@@ -15,6 +17,8 @@ inputVal.oninput = function() {
     inputVal.classList.remove("invalid");
   }
   if (inputVal.value.length !== intTotallenght && inputVal.value.length !== 0) {
-    inputVal.classList.add("invalid");
+     inputVal.classList.add("invalid");
+     inputVal.classList.remove("valid");
   }
 };
+

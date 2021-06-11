@@ -6,13 +6,27 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+const ingredientsRef = document.querySelector('#ingredients')
 
-const creatList = ingredients.forEach((ingredient) => {
+const newArrIngredient = ingredients.map(elem => {
+  const li = document.createElement('li');
+  li.textContent = elem;
+  return li;
+});
 
-   const groceryList = document.createElement('li')
-   groceryList.textContent = ingredient
+ingredientsRef.append(...newArrIngredient);
+console.log(ingredientsRef);
 
-   const ingredientsRef = document.querySelector('#ingredients');
 
-   ingredientsRef.appendChild(groceryList)
-})
+///////////////////
+
+
+// const creatList = ingredients.forEach((ingredient) => {
+
+//    const groceryList = document.createElement('li')
+//    groceryList.textContent = ingredient
+
+//    const ingredientsRef = document.querySelector('#ingredients');
+
+//    ingredientsRef.appendChild(groceryList)
+// })
