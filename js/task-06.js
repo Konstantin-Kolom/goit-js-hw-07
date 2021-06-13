@@ -2,7 +2,6 @@ const inputVal = document.getElementById("validation-input");
 const inputLength = inputVal.getAttribute("data-length");
 const intTotallenght = parseInt(inputLength, 10);
 
-
 inputVal.addEventListener('blur', onInput);
 
 function onInput() {
