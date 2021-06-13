@@ -1,11 +1,8 @@
-// const inputRef = document.querySelector('#validation-input');
-// const createAttribute = inputRef.setAttribute('maxlength', 'inputMaxLength')
-
 const inputVal = document.getElementById("validation-input");
 const inputLength = inputVal.getAttribute("data-length");
 const intTotallenght = parseInt(inputLength, 10);
 
-inputEL.addEventListener('blur', onInput);
+inputVal.addEventListener('blur', onInput);
 
 function onInput() {
   if (inputVal.value.length === intTotallenght) {
@@ -21,4 +18,3 @@ function onInput() {
      inputVal.classList.remove("valid");
   }
 };
-
